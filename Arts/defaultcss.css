@@ -1,0 +1,461 @@
+:root {
+  --mainColor: #eaeaea;
+  --secondaryColor: #fff;
+
+  --mainText: black;
+  --secondaryText: #4b5156;
+
+  --borderColor: #c1c1c1;
+
+  --themeDotBorder: #24292a;
+
+  --previewbg: rgba(255, 220, 149, 0.8);
+  --previewShadow: #fddd74;
+
+  --buttonColor:black;
+
+
+}
+
+/* saarre ko similar karne k liye pure page ko */
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+body *{
+  transition: 0.3s;
+}
+
+
+
+/* saare H tags ko similar karne k liye i mean color mein */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--mainText);
+  font-family: "Russo One", sans-serif;
+  font-weight: 100px;
+}
+
+p,
+li,
+span,
+label,
+input,
+textarea {
+  font-family: "Rowdies", cursive;
+  color: var(--secondaryText);
+}
+
+/* saare linking tags ko nahi underline ho iss liye aur color change ho jaye thru out the page */
+a {
+  text-decoration: none;
+  color: #17a2b8;
+}
+
+/* saare list tags ko nahi underline ho iss liye aur color change ho jaye thru out the page */
+
+ul {
+  list-style: none;
+}
+
+/* color toh upar de diya but sabka size alag krne k liye H tage ka */
+
+h1 {
+  font-size: 56px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 26px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 20px;
+}
+h6 {
+  font-size: 16px;
+}
+
+/* harr section alag hoga iss liye sabko same color dene k liye root main color root se uthaya hai  taki sabko same color mile*/
+.s1 {
+  background-color: var(--mainColor);
+  border-bottom: 1px solid var(--borderColor);
+  overflow: auto;
+}
+.s2 {
+  background-color: var(--secondaryColor);
+  border-bottom: 1px solid var(--borderColor);
+  overflow: auto;
+}
+
+/* ye jo center mein float ho rha h satyam gupta k niche wlaa vo h ye */
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hey There, I'am Satyam Gupta" ko center krne k liye ye use kiya hai "iten ko center ko laane mein" */
+.greeting-wrapper {
+  display: grid;
+  text-align: center;
+  align-content: center;
+
+  min-height: 10em;
+}
+
+/* ye outer part hainn dots k just upar wala boder radius jaha diya hua h vo h ye */
+.intro-wrapper {
+  background-color: var(--secondaryColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 5px 5px 0 0;
+
+
+
+  /* css box shadow css generator se banaya hai */
+ -webkit-box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
+-moz-box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
+box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
+
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas:
+    "nav-wrapper nav-wrapper"
+    "left-column right-column";
+}
+
+/* pura nav baar banane k liye ye use kiya hai */
+.nav-wrapper {
+  grid-area: nav-wrapper;
+  border-bottom: 1px solid var(--borderColor);
+  border-radius: 5px 5px 0 0;
+  background-color: var(--mainColor);
+  /* 3 dots wala part yaha hai red yelow green */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+#navigation a{
+  color: var(--mainText);
+
+}
+
+
+/* ye contact wala hai nav bar last element */
+#navigation {
+  margin: 0;
+  pad: 10px;
+}
+
+
+
+
+#navigation li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* browser dots ko ek line mein karne k liye ye kiya h */
+.dots-wrapper {
+  display: flex;
+  padding: 10px;
+
+  /* add shadow here  */
+
+}
+
+#dot-1 {
+  background-color: red;
+}
+#dot-2 {
+  background-color: yellow;
+}
+#dot-3 {
+  background-color: green;
+}
+
+/* id k baad ka class ka naam hai jo dots ko heignt width ye sabb de rha h */
+.browser-dots {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.left-column {
+  grid-area: left-column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#profile_pic {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  border: 2px solid var(--borderColor);
+}
+
+#theme-option-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-dot {
+  height: 30px;
+  width: 30px;
+  background-color: #000000;
+  border-radius: 50%;
+
+  margin: 5px;
+  border: 2px solid var(--themeDotBorder);
+
+  /* shadow goes here */
+
+
+
+
+
+  cursor: pointer;
+}
+
+.theme-dot:hover {
+  border-width: 5px;
+}
+
+#light-mode {
+  background-color: #fff;
+}
+#blue-mode {
+  background-color: #192734;
+}
+#green-mode {
+  background-color: #78856b;
+}
+#purple-mode {
+  background-color: #764c74;
+}
+
+/* theme option will be saved for  */
+#setting-note {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.right-column {
+  grid-area: right-column;
+  display: grid;
+  align-content: center;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#preview-shadow {
+  background-color: var(--previewShadow);
+  width: 300px;
+  height: 180px;
+  padding-left: 30px;
+}
+
+#preview {
+  margin-top: 33px;
+  width: 300px;
+  border: 1.5px solid #17a2b8;
+  background-color: var(--previewbg);
+  padding: 15px;
+  position: relative;
+}
+
+/* corners dots yaha se chalu hai */
+.corner {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  border: 1.5px solid #17a2b8;
+  background-color: #fff;
+
+  position: absolute;
+}
+
+#corner-tl {
+  top: -5px;
+  left: -5px;
+}
+#corner-tr {
+  top: -5px;
+  right: -5px;
+}
+#corner-br {
+  bottom: -5px;
+  right: -5px;
+}
+#corner-bl {
+  bottom: -5px;
+  left: -5px;
+}
+
+.about-wrapper {
+  display: grid;
+
+  /* ye bol rha h ki FIT AS MANY COLUMNS AS U CAN IN THIS ROW WHIT WIDTH 320PX */
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+
+
+  /*grid column k beech mein gap denen k liye kiya h ye*/
+  gap:100px;
+}
+
+#skills{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--previewShadow)
+}
+
+
+.social-links{
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+
+#social_img{
+  width: 100%;
+}
+
+
+.post-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  gap:20px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+
+.post{
+  border:1px solid var(--borderColor);
+
+  /*SHADOW HERE*/
+
+  -webkit-box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
+-moz-box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
+box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
+
+}
+
+
+.thumbnail{
+
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-preview{
+  background-color: #fff;
+  padding: 15px;
+
+}
+
+.post-title{
+  color: black;
+  margin: 0;
+}
+
+.post-intro{
+  color: #4b5156;
+  font-size: 16px;
+}
+
+
+#contact-form{
+
+  display: block;
+
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid var(--borderColor);
+  padding:15px;
+  border-radius: 5px;
+  background-color: var(--mainColor);
+  margin-bottom: 50px;
+}
+
+
+/*input area and NAME are k beech ka gap*/
+#contact-form label{
+  line-height: 2.7em;
+}
+
+
+
+.input-field{
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--secondaryColor)
+  border-radius:5px;
+  border:1px solid var(--borderColor);
+  font-size: 14px;
+}
+
+
+#submit-btn{
+  margin-top: 10px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  background-color: var(--buttonColor);
+  border:none;
+}
+
+
+
+
+
+/* responsive banane k liye page ko ek chota sa media querry banaya h */
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 95%;
+  }
+}
+
+/* screen choti hone pe single coloumn mein aa jane k liye ye media querry dala h */
+
+@media screen and (max-width: 800px) {
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "nav-wrapper"
+      "left-column"
+      "right-column";
+  }
+
+  .right-column {
+    justify-content: center;
+  }
+}

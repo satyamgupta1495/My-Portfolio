@@ -69,21 +69,27 @@ ul {
 /* color toh upar de diya but sabka size alag krne k liye H tage ka */
 
 h1 {
+  font-weight: 100;
   font-size: 56px;
 }
 h2 {
+      font-weight: 100;
   font-size: 36px;
 }
 h3 {
+      font-weight: 100;
   font-size: 26px;
 }
 h4 {
+      font-weight: 100;
   font-size: 24px;
 }
 h5 {
+      font-weight: 100;
   font-size: 20px;
 }
 h6 {
+      font-weight: 100;
   font-size: 16px;
 }
 
@@ -166,6 +172,7 @@ box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
 
 
 #navigation li {
+  padding: 15px;
   display: inline-block;
   margin-right: 5px;
   margin-left: 5px;
@@ -328,7 +335,7 @@ box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
 
 #skills{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   background-color: var(--previewShadow)
 }
 
@@ -361,7 +368,7 @@ box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
   -webkit-box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
 -moz-box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
 box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
-
+text-align: center;
 }
 
 
@@ -387,6 +394,14 @@ box-shadow: 6px 7px 12px -4px rgba(0,0,0,0.81);
 .post-intro{
   color: #4b5156;
   font-size: 16px;
+}
+
+#post-card{
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit:cover;
+  justify-content: center;
 }
 
 
